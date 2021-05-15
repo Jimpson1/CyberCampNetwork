@@ -65,9 +65,9 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 #### It's free and can be used for cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+#### Downloads and installs filebeat install file
+#### Inserts the relevant yaml files
+#### starts and sets up filebeat service
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
