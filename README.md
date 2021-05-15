@@ -1,17 +1,15 @@
 ## Automated ELK Stack Deployment
 
-The files in this repository were used to configure the network depicted below.
-
-**Note**: The following image link needs to be updated. Replace `diagram_filename.png` with the name of your diagram image file.  
+The files in this repository were used to configure the network depicted below. 
 
 ![TODO: Update the path with the name of your diagram](Diagrams/Week13Diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+ #### filebeat-playbook.txt
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -23,22 +21,23 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+Load balancers can prove vital to security as it can be used to offload attack traffic to another server. Jump box allows centraliaze management of other servers. 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
+Filebeat is a lightweight shipper for forwarding and centralizing log data.
+Metricbeat is a lightweight shipper that you can install on your servers to periodically collect metrics from the operating system and from services running on the server.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Mngmt    | 10.0.0.4   | Linux            |
+| Web-1    | Web Srv  | 10.0.0.5   | Linux            |
+| Web-2    | Web Srv  | 10.0.0.6   | Linux            |
+| Web-3    | Web Srv  | 10.0.0.9   | Linux            |
+| ELKBOX1  | Monitor  | 10.2.0.4   | Linux            |
 
 ### Access Policies
 
